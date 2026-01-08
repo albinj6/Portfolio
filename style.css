@@ -1,169 +1,172 @@
 /* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
+:root {
+    --bg-color: #0a192f;
+    --text-color: #ccd6f6;
+    --accent-color: #64ffda; /* Blue-green accent from typical Figma dev templates */
+    --card-bg: #112240;
+}
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Lighten the background */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    padding: 20px 0;
-}
-
-/* Header Styles */
-header {
-    background: linear-gradient(to right, #3bcda4, #1c1c1c);
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    font-weight: 700;
-    margin: 10px 0;
-    font-size: 2em; /* Larger font size */
-}
-
-header p {
-    margin: 5px 0;
-    font-size: 1em; /* Slightly smaller */
-}
-
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: 500;
-}
-
-header nav a:hover {
-    text-decoration: underline;
-}
-
-/* Profile Photo */
-.profile-photo {
-    display: block;
-    margin: 10px auto;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px; /* Smaller size */
-}
-
-/* Section Styles */
-.section {
-    background: #fff;
-    padding: 20px 0;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #333;
-    border-bottom: 2px solid #3bcda4;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    text-align: center;
-    font-size: 1.8em; /* Larger font size */
-}
-
-/* Timeline Styles */
-.timeline {
-    position: relative;
-    max-width: 100%; /* Full width */
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 40px 20px;
 }
 
-.timeline-item {
-    padding: 10px 20px;
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
-    border-left: 3px solid #3bcda4; /* Solid border instead of icon */
+/* Header & Nav */
+header {
+    background: rgba(22, 43, 78, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
-.timeline-item h3 {
-    font-weight: 600;
-}
-
-.timeline-item p {
-    margin: 5px 0;
-}
-
-/* Skills Styles */
-.skills-grid {
+nav {
     display: flex;
-    flex-direction: column; /* Single column layout */
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
-.skill-item {
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.skill-item h3 {
-    color: #3bcda4;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-/* Projects & Experience Styles */
-.project-grid, .experience-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.project-item, .experience-item {
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.project-item h3, .experience-item h3 {
-    color: #3bcda4;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-/* Contact Section */
-#contact ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#contact ul li {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
-
-#contact ul li a {
-    color: #3bcda4;
-    text-decoration: none;
-}
-
-#contact ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Footer Styles */
-footer {
-    background: #333;
+.logo {
+    font-size: 1.75rem;
+    font-weight: bold;
     color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9em;
+.logo span { color: var(--accent-color); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+h5 { color: var(--accent-color); font-family: monospace; }
+h1 { font-size: 4rem; color: #e6f1ff; }
+h2 { font-size: 3rem; color: #8892b0; margin-bottom: 20px; }
+#hero p { max-width: 600px; margin-bottom: 40px; }
+
+.btn {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn:hover { background: rgba(100, 255, 218, 0.1); }
+
+/* Experience Section */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #e6f1ff;
+    display: flex;
+    align-items: center;
+}
+
+.exp-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.date { font-family: monospace; color: var(--accent-color); }
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.project-card:hover { transform: translateY(-10px); }
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.badge.award { background: #ffd700; color: #000; }
+
+.project-card i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.tags {
+    margin-top: 20px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: #8892b0;
+}
+
+/* Skills */
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.skill-category h4 { color: var(--accent-color); margin-bottom: 10px; }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.socials {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+.socials a { color: var(--text-color); transition: 0.3s; }
+.socials a:hover { color: var(--accent-color); }
