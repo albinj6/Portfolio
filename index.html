@@ -14,8 +14,8 @@
             <div class="logo">ALBIN<span>.</span></div>
             <ul class="nav-links">
                 <li><a href="#hero">About</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -48,7 +48,7 @@
     <section id="projects" class="container">
         <h3 class="section-title">Projects</h3>
         <div class="project-grid">
-            <div class="project-card featured">
+            <div class="project-card featured" data-project="0">
                 <div class="badge">Patent Pending</div>
                 <i class="fa-solid fa-microchip"></i>
                 <h4>Visual Break System </h4>
@@ -56,7 +56,7 @@
                 <div class="tags">Tinkercad, Arduino, C#</div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-project="1">
                 <div class="badge award">YIP 5.0 Winner</div>
                 <i class="fa-solid fa-pills"></i>
                 <h4>Medicine Refill System </h4>
@@ -64,7 +64,7 @@
                 <div class="tags">Innovation, Funding</div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-project="2">
                 <div class="badge">Live Project</div>
                 <i class="fa-solid fa-earth-americas"></i>
                 <h4>Science Excursion Website</h4>
@@ -72,14 +72,14 @@
                 <div class="tags">Web Development, Education</div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-project="3">
                 <i class="fa-solid fa-hands-asl-interpreting"></i>
                 <h4>Sign Language Detection</h4>
                 <p>Arduino wearable using flex sensors to interpret gestures.</p>
                 <div class="tags">Arduino, Sensors</div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-project="4">
                 <i class="fa-solid fa-comments"></i>
                 <h4>Language Learning Chatbot</h4>
                 <p>Developed a chatbot to assist with language learning.</p>
@@ -126,5 +126,26 @@
             <p class="phone">+971 54 587 3036</p>
         </div>
     </footer>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <i class="modal-icon"></i>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <div class="modal-details">
+                    <h4>Technologies Used:</h4>
+                    <p id="modalTags"></p>
+                </div>
+                <div class="modal-details">
+                    <h4>Key Features:</h4>
+                    <ul id="modalFeatures"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
