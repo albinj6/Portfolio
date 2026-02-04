@@ -1,68 +1,33 @@
 const projects = [
     {
         title: "Visual Break System",
-        description: "An innovative automated hardware-based system designed to reduce digital eye strain by implementing the 20-20-20 rule. Every 20 minutes, the system reminds users to look at something 20 feet away for 20 seconds.",
+        description: "An innovative, automated hardware-based system designed to reduce digital eye strain by implementing the 20-20-20 rule. Every 20 minutes, the system covers the screen with a fabric to force the user to look away, providing a 20-second break. The project is currently awaiting patent approval. This project focuses on reducing the risk of eye strain and associated health issues among frequent computer users.",
         tags: "Tinkercad, Arduino, C#",
-        icon: "fa-solid fa-microchip",
-        features: [
-            "Automated eye strain detection and reminder system",
-            "Arduino-based hardware implementation",
-            "Real-time monitoring and notifications",
-            "Patent-pending innovative design",
-            "User-friendly interface with customizable settings"
-        ]
+        icon: "fa-solid fa-microchip"
     },
     {
         title: "Medicine Refill System",
-        description: "An award-winning project that won ₹25,000 in funding at YIP 5.0 competition. The system provides timely reminders for medicine refills, ensuring patients never miss their medications.",
+        description: "An award-winning project that secured ₹25,000 in funding at the YIP 5.0 competition, this system provides timely reminders for medicine refills to ensure patients never miss a dose. By leveraging a network of NGO volunteers, we deliver medications directly to the patient's doorstep. The system specifically supports the elderly, eliminating the need for them to travel to pharmacies and preventing delays in treatment caused by forgetfulness.",
         tags: "Innovation, Healthcare Technology, Automation",
-        icon: "fa-solid fa-pills",
-        features: [
-            "Automated medicine refill alerts and reminders",
-            "Integration with pharmacy systems",
-            "Multi-user support with family tracking",
-            "Won YIP 5.0 competition - ₹25,000 funding",
-            "Recognized for healthcare innovation impact"
-        ]
+        icon: "fa-solid fa-pills"
     },
     {
         title: "Science Excursion Website",
-        description: "A live educational platform designed for school students to register for practical science educational visits. The website: <a href='https://scienceexcursion.in/' target='_blank' class='description-link'>scienceexcursion.in</a> provides a seamless registration experience for science learning expeditions.",
+        description: "A live educational platform designed for school students to register for practical science educational visits. The website: <a href='https://scienceexcursion.in/' target='_blank' class='description-link'>scienceexcursion.in</a> provides a seamless registration experience for science learning expeditions. The platform features real-time availability tracking and automated confirmation emails to enhance user experience. It also includes a content management system for educators to upload and manage educational materials related to the excursions.",
         tags: "Web Development, HTML, CSS, JavaScript",
-        icon: "fa-solid fa-earth-americas",
-        features: [
-            "User-friendly registration interface",
-            "Real-time availability tracking",
-            "Automated confirmation and notifications",
-            "Educational content management system",
-            "Mobile-responsive design for all devices"
-        ]
+        icon: "fa-solid fa-earth-americas"
     },
     {
         title: "Sign Language Detection",
-        description: "An innovative Arduino wearable device equipped with flex sensors to detect and interpret hand gestures and sign language in real-time, bridging communication gaps.",
+        description: "An innovative Arduino-powered wearable device that leverages flex sensors to interpret hand gestures and sign language in real-time, effectively bridging communication gaps. Utilizing advanced signal processing, the system accurately recognizes complex sign language gestures and converts them into immediate speech output. This project aims to empower individuals with hearing or speech impairments by facilitating seamless, natural interactions in their daily lives.",
         tags: "Arduino, Sensors, Signal Processing, Wearable Tech",
-        icon: "fa-solid fa-hands-asl-interpreting",
-        features: [
-            "Real-time gesture recognition using flex sensors",
-            "Arduino-based wearable device",
-            "Accurate sign language interpretation",
-            "Wireless connectivity for data transmission",
-            "Accessibility-focused technology implementation"
-        ]
+        icon: "fa-solid fa-hands-asl-interpreting"
     },
     {
         title: "Language Learning Chatbot",
-        description: "An intelligent chatbot developed in Python to assist users with language learning. The bot provides interactive lessons, vocabulary exercises, and conversational practice for language acquisition.",
+        description: "An intelligent Python-based chatbot designed to facilitate immersive language learning through real-time text and voice interaction. The bot bridges the comprehension gap by providing dual-language responses in both the target language and English, ensuring users remain engaged without losing context. Beyond conversation, the system incorporates a gamified assessment framework to track the user progress. This interactive tool serves as a versatile companion for learners seeking to build confidence and proficiency through consistent, AI-guided practice and measurable milestones.",
         tags: "Python, Natural Language Processing, AI, Chatbot",
-        icon: "fa-solid fa-comments",
-        features: [
-            "Interactive language learning conversations",
-            "Vocabulary and grammar exercises",
-            "Real-time language correction and feedback",
-            "Multiple language support",
-            "Adaptive learning based on user progress"
-        ]
+        icon: "fa-solid fa-comments"
     }
 ];
 
@@ -93,15 +58,6 @@ function showModal(index) {
     // Set icon
     const modalIcon = document.querySelector('.modal-icon');
     modalIcon.className = 'modal-icon ' + project.icon;
-    
-    // Set features list
-    const featuresList = document.getElementById('modalFeatures');
-    featuresList.innerHTML = '';
-    project.features.forEach(feature => {
-        const li = document.createElement('li');
-        li.textContent = feature;
-        featuresList.appendChild(li);
-    });
     
     // Show modal
     modal.classList.add('show');
