@@ -70,7 +70,7 @@ nav {
 }
 
 #hero, #experience, #projects, #skills, #contact {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 60px;
 }
 
 .hed { color: var(--accent-color); font-family: monospace; }
@@ -386,6 +386,7 @@ footer {
         padding: 12px;
     }
 }
+
 
 
 
