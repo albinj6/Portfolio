@@ -85,3 +85,19 @@ document.addEventListener('keydown', function(event) {
         document.body.style.overflow = 'auto';
     }
 });
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        } else {
+            // Optional: remove this if you want it to only animate once
+            entry.target.classList.remove('active');
+        }
+    });
+}, {
+    threshold: 0.1 // Triggers when 10% of the section is visible
+});
+
+const hiddenElements = document.querySelectorAll('.reveal');
+hiddenElements.forEach((el) => observer.observe(el));
